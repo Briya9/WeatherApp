@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>Weather App</title>
+<style type="text/css">
+@import url(https://fonts.googleapis.com/css?family=Black+Ops+One);
+html,body{
+}
+.card{
+	 box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+	 background-color:  #FFF;
+	 padding: 5px;
+	 margin-top: 20px;
+	 height: auto;
+	 width: auto;
+}
+.place{
+	    font-family: arial,sans-serif-light,sans-serif;
+	    color: #878787;
+	    font-size: x-large;
+	    line-height: 1.2;
+        text-align: left;
+        font-weight: lighter;
+}
+.day,.summary{
+	    font-family: arial,sans-serif-light,sans-serif;
+	    font-size: medium;
+	    font-weight: lighter;
+	    color: #878787;
+	    line-height: 1.2;
+        text-align: left;
+}
+.tmp{
+	color: #212121;
+	font: 16px arial,helvetica,sans-serif;
+	display: inline;
+
+	 
+}
+
+ .t_sh {
+    font-family: arial,sans-serif-light,sans-serif;
+    font: 16px arial,helvetica,sans-serif;
+    text-align: left;
+}
+.t_sh {
+    font-size: medium;
+  }
+  .t_sh{
+    font-weight: lighter;
+}
+.t_gy {
+    color: #878787;
+}
+ .t_sh {
+    font-family: arial,sans-serif-light,sans-serif;
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
+  
+</head>
+<body style="background-image:url("1.jpg")">
+
+<h2 style="font-family: 'Black Ops One', cursive;color:#1a1a1a;"><center>Weather Report</center></h2>
+<div class="container-fluid">
+<div class="row">
+ <div class="col-md-3"></div>
+  <div class="col-md-6 card">
+  	 <div class="block">
+  	 <div class="place">Place</div>
+  	 <div class="day">Day</div>
+  	 <div class="day">{{ timezone }}</div>
+  	 <div class="summary">{{ summary }}</div>
+  	 </div>
+  	 <div class="icon-summary" style="display:inline-block">
+  	 	<img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" height="" width="">
+     </div>
+     <div class="tmp" style="margin-top:-3px;font-size:64px">
+     <span class="w_temp" style="margin-top:10px;display:inline">{{ cel }} &#x2103;
+</span>
+     </div>
+    <div class="t_gy t_sh" style="float:right;padding-left:5px;line-height:22px;padding-top:2px;min-width:43%">
+     <div>Precipitation: <span>{{ prec }} %</span></div>
+     <div>Humidity: <span>{{ hum }} %</span></div>
+     <div>Wind: <span><span>{{ wind }} km/h</span>
+     <span  style="display:none"></span></span>
+     </div>
+     <div style="padding:15px 0 9px">
+     </div>
+     </div>
+  </div>
+  <div class="col-md-3"></div>
+  
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
+</body>
+</html>
