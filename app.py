@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def weatherdata():
-    api_key = "660aa041d1aa157e5f78ac527cd1921a"
+    api_key = "FLASK_API_KEY"
     response = r.get("https://api.forecast.io/forecast/%s/%s,%s"%(api_key,16.5189,80.3613))
     content = response.content
     data  = json.loads(content)
